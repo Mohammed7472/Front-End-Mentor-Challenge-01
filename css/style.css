@@ -1,0 +1,114 @@
+/* Start Globlal Variables */ 
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+/* End Globlal Variables */
+/* Start Global Rules */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--pale-blue);
+  position: relative;
+}
+/* End Global Rules */
+/* Start Project Box */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+  max-width: 450px;
+  text-align: center;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 375px;
+    max-width: 100%;
+  }
+}
+.container .content {
+  margin: 30px 0;
+}
+.container .content > h2 {
+  color: var(--dark-blue);
+  font-size: 28px;
+  font-weight: 900;
+}
+.container .content > .subtitle {
+  color: #8a8a8a;
+  max-width: 300px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+.container .plan-box {
+  background-color: var(--very-pale-blue);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 78%;
+  margin: auto;
+}
+.container .plan-box > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container .plan-box .text > h2 {
+  font-weight: 700;
+}
+.container .plan-box .text > span {
+  color: #8a8a8a;
+  display: block;
+  margin-top: 5px;
+}
+.container .plan-box a {
+  margin-left: auto;
+  color: #673AB7;
+  font-weight: 900;
+}
+.container .plan-box a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.container > a:not(.cancel-btn){
+  display: block;
+  background-color: var(--bright-blue);
+  color: white;
+  padding: 15px 0;
+  width: 78%;
+  margin: 30px auto;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 10px 10px hsl(225deg 39.14% 83.14%);
+}
+.container > .cancel-btn {
+  display: block;
+  text-decoration: none;
+  color: var(--desaturated-blue);
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 0 40px;
+  transition: 0.3s;
+}
+.container > .cancel-btn:hover {
+  color: var(--dark-blue);
+}
+/* End Project Box */
